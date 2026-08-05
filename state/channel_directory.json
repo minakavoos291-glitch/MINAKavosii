@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-08-05T14:12:05.829971",
+  "platforms": {
+    "telegram": [
+      {
+        "id": "REDACTED",
+        "name": "Mina Kavoosi",
+        "type": "dm",
+        "thread_id": null
+      }
+    ]
+  }
+}
