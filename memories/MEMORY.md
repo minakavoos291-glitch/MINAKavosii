@@ -4,4 +4,4 @@ Backup setup: REDACTED/scripts/hermes-memory-backup.sh backs up Hermes state (me
 §
 Memory tool blocks Persian text containing U+200C (نیم فاصله / ZWNJ) as possible injection — write Persian memory entries without ZWNJ (use plain spaces).
 §
-Skill meta-ontomics-assistant saved (jozve analysis, exams, pptx presentations with dark+gold theme). Presentation 'Aghahi' built: /data/workspace/meta-ontomics/agahi-meta-ontomics.pptx (12 slides) + PDF.
+Skill meta-ontomics-assistant saved (jozve analysis, exams, pptx with dark+gold theme) but is USER-OWNED (created_by=None) — curator writes refused; needs `hermes curator adopt`. Presentations built: agahi-meta-ontomics.pptx (12 slides) + edgham-ravanshenasi.pptx/.md (psychology integration). Psychology integration knowledge lives in /data/workspace/meta-ontomics/edgham-ravanshenasi.md (concept map, 5-layer model, 8-week protocol).
