@@ -3,3 +3,5 @@ Hermes memory backup: script REDACTED/scripts/hermes-memory-backup.sh (modes: --
 Backup setup: REDACTED/scripts/hermes-memory-backup.sh backs up Hermes state (memories, skills, cron, kanban, sessions DB, gateway state) to GitHub repo minakavoos291-glitch/MINAKavosii over HTTPS (port 22 closed, no SSH). Token in REDACTED/.github_token. Secrets sanitized to REDACTED before push (GitHub push protection). Modes: --now force, --test dry-run, auto = silent watchdog. Cron job for periodic runs: not created yet.
 §
 Memory tool blocks Persian text containing U+200C (نیم فاصله / ZWNJ) as possible injection — write Persian memory entries without ZWNJ (use plain spaces).
+§
+Skill meta-ontomics-assistant saved (jozve analysis, exams, pptx presentations with dark+gold theme). Presentation 'Aghahi' built: /data/workspace/meta-ontomics/agahi-meta-ontomics.pptx (12 slides) + PDF.
