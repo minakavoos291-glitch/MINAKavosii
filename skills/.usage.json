@@ -25,6 +25,19 @@
     "use_count": 1,
     "view_count": 1
   },
+  "github-state-backup": {
+    "archived_at": null,
+    "created_at": "2026-08-08T15:07:15.143661+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-08T15:07:37.996917+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "hermes-agent": {
     "archived_at": null,
     "created_at": "2026-08-05T14:06:16.421714+00:00",
@@ -77,6 +90,19 @@
     "use_count": 0,
     "view_count": 0
   },
+  "persian-rtl-content": {
+    "archived_at": null,
+    "created_at": "2026-08-08T15:08:11.511339+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "persian-text-handling": {
     "archived_at": null,
     "created_at": "2026-08-08T14:22:11.917310+00:00",
@@ -89,5 +115,18 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "powerpoint": {
+    "archived_at": null,
+    "created_at": "2026-08-08T15:04:07.514940+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-08-08T15:04:07.518760+00:00",
+    "last_viewed_at": "2026-08-08T15:04:07.514958+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   }
 }
