@@ -1,4 +1,17 @@
 {
+  "exam-design": {
+    "archived_at": null,
+    "created_at": "2026-08-08T14:48:43.590077+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "github-repo-management": {
     "archived_at": null,
     "created_at": "2026-08-05T14:06:16.413670+00:00",
@@ -25,6 +38,19 @@
     "use_count": 2,
     "view_count": 2
   },
+  "hermes-state-backup": {
+    "archived_at": null,
+    "created_at": "2026-08-08T14:22:11.901316+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-08-08T14:48:56.318758+00:00",
+    "last_used_at": "2026-08-08T14:48:49.792099+00:00",
+    "last_viewed_at": "2026-08-08T14:48:49.786122+00:00",
+    "patch_count": 3,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "ocr-and-documents": {
     "archived_at": null,
     "created_at": "2026-08-08T14:17:40.576323+00:00",
@@ -37,5 +63,31 @@
     "state": "active",
     "use_count": 1,
     "view_count": 1
+  },
+  "persian-content-handling": {
+    "archived_at": null,
+    "created_at": "2026-08-08T14:48:43.567721+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "persian-text-handling": {
+    "archived_at": null,
+    "created_at": "2026-08-08T14:22:11.917310+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
   }
 }

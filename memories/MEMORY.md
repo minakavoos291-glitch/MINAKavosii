@@ -1,1 +1,5 @@
 Hermes memory backup: script REDACTED/scripts/hermes-memory-backup.sh (modes: --now forced, --test dry-run, no flag = auto/silent) pushes to GitHub repo minakavoos291-glitch/MINAKavosii. Token in REDACTED/.github_token; sensitive values REDACTED before push. Cron every 3h, no_agent (reports only on change/error).
+§
+Backup setup: REDACTED/scripts/hermes-memory-backup.sh backs up Hermes state (memories, skills, cron, kanban, sessions DB, gateway state) to GitHub repo minakavoos291-glitch/MINAKavosii over HTTPS (port 22 closed, no SSH). Token in REDACTED/.github_token. Secrets sanitized to REDACTED before push (GitHub push protection). Modes: --now force, --test dry-run, auto = silent watchdog. Cron job for periodic runs: not created yet.
+§
+Memory tool blocks Persian text containing U+200C (نیم فاصله / ZWNJ) as possible injection — write Persian memory entries without ZWNJ (use plain spaces).
