@@ -82,13 +82,13 @@
     "created_at": "2026-08-08T15:12:08.516066+00:00",
     "created_by": null,
     "last_patched_at": "2026-08-08T15:12:08.516084+00:00",
-    "last_used_at": "2026-08-08T15:51:10.701059+00:00",
-    "last_viewed_at": "2026-08-08T15:51:10.697922+00:00",
+    "last_used_at": "2026-08-08T16:51:42.721006+00:00",
+    "last_viewed_at": "2026-08-08T16:51:42.712466+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "ocr-and-documents": {
     "archived_at": null,
@@ -146,14 +146,14 @@
     "archived_at": null,
     "created_at": "2026-08-08T15:39:31.875630+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-08-08T15:39:42.575503+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 1,
+    "last_patched_at": "2026-08-08T16:52:55.505899+00:00",
+    "last_used_at": "2026-08-08T16:52:27.853071+00:00",
+    "last_viewed_at": "2026-08-08T16:52:27.848776+00:00",
+    "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "powerpoint": {
     "archived_at": null,
