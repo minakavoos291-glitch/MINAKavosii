@@ -1,0 +1,1 @@
+Hermes memory backup: script REDACTED/scripts/hermes-memory-backup.sh (modes: --now forced, --test dry-run, no flag = auto/silent) pushes to GitHub repo minakavoos291-glitch/MINAKavosii. Token in REDACTED/.github_token; sensitive values REDACTED before push. Cron every 3h, no_agent (reports only on change/error).
