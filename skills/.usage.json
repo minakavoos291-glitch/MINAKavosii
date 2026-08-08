@@ -64,18 +64,31 @@
     "use_count": 1,
     "view_count": 1
   },
+  "honest-person-assessments": {
+    "archived_at": null,
+    "created_at": "2026-08-08T15:55:45.413383+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "meta-ontomics-assistant": {
     "archived_at": null,
     "created_at": "2026-08-08T15:12:08.516066+00:00",
     "created_by": null,
     "last_patched_at": "2026-08-08T15:12:08.516084+00:00",
-    "last_used_at": "2026-08-08T15:20:36.776389+00:00",
-    "last_viewed_at": "2026-08-08T15:20:36.772906+00:00",
+    "last_used_at": "2026-08-08T15:51:10.701059+00:00",
+    "last_viewed_at": "2026-08-08T15:51:10.697922+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "ocr-and-documents": {
     "archived_at": null,
