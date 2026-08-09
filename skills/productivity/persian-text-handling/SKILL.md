@@ -24,6 +24,13 @@ Some `terminal` invocations fail with `ValueError: embedded null byte` inside th
 - Fix A: copy the file to an ASCII path first (`cp "REDACTED/cache/documents/<persian name>.pdf" /tmp/ascii.pdf`) and reference the ASCII path.
 - Fix B (most reliable): write the code to a `.py` file with write_file, then run `python3 /tmp/script.py <ascii-path>` instead of `python3 -c "..."`.
 - Plain shell commands with quoted Persian paths (cp, ls, find) work fine — the guard only trips on some inline-code shapes.
+- Also safe: `python3 - <<'EOF'` heredoc scripts (the guard targets inline `-c` forms; heredocs read from stdin and are not affected).
+
+## 4. Searching Persian text — multi-word patterns with ZWNJ return 0 hits
+`search_files` (ripgrep) with a multi-word Persian pattern containing ZWNJ (e.g. `نویز|فیزیک ایمان|نگنتروپی|کوپلر`) returns `total_count: 0` even when the text exists — the query's ZWNJ bytes don't match the file's ZWNJ bytes, and multi-word tokenization compounds it. Observed twice (this pattern is a real trap, not a fluke).
+- Fix: search SINGLE words with no ZWNJ (`pattern: فیزیک`), or use terminal grep: `grep -c 'واژه' file.txt`.
+- Most reliable for verifying jozve keywords: python single-word `re.finditer` over `open(path, encoding='utf-8').read()`, printing context slices per match. This verified jozve-moghadamat.txt keywords (فرکانس 78، نویز 7، نگنتروپی 7، کوپلر 4) after search_files returned 0.
+- Only SEARCH queries are fragile; reading files containing ZWNJ (read_file, python open) works fine.
 
 ## 3. Persian PDF extraction
 - pymupdf `page.get_text()` extracts Persian text cleanly (a 58-page RTL booklet extracted without OCR). Inter-word spacing artifacts come from the PDF fonts, not extraction bugs.
