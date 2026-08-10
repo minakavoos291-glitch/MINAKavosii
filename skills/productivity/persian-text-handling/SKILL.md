@@ -32,6 +32,14 @@ Some `terminal` invocations fail with `ValueError: embedded null byte` inside th
 - Most reliable for verifying jozve keywords: python single-word `re.finditer` over `open(path, encoding='utf-8').read()`, printing context slices per match. This verified jozve-moghadamat.txt keywords (فرکانس 78، نویز 7، نگنتروپی 7، کوپلر 4) after search_files returned 0.
 - Only SEARCH queries are fragile; reading files containing ZWNJ (read_file, python open) works fine.
 
+## 5. Persian content in write_file/execute_code can silently corrupt — chunk + verify
+Symptom (observed 2026-08-10 twice on long Persian markdown, ~15-30K chars in one write_file call): output returns `wrote ... (N lines)` but the on-disk text contains mangled sequences — Arabic letters mixed with stray Latin runs (`راِِِِِِ`, `نویسهِِِِ`, `ِِِ`), duplicated ZWNJ-ish fragments, and chopped text. The corruption is in what actually gets written, NOT just display.
+- Fix that worked: write the document in SMALL chunks (2-6K chars each) via `execute_code` → `open(path,'a',encoding='utf-8').write(chunk)` (or write_file per chunk), and after each chunk verify with a regex scan:
+  `bad = re.findall(r'[a-zA-Z]{2,}[\u0600-\u06FF]|[\u0600-\u06FF][a-zA-Z]{2,}', chunk)` — 0 hits = clean.
+- Fallback that also worked: plain `python3 - <<'EOF'` heredoc write with the same verify step.
+- On a glitch: silently rewrite from the last clean chunk; do NOT narrate the retry to the user (they read it as excuses: «چرا معطل میکنی»، «بهونه نیار»، «زود و سریع باش»). Just rebuild and deliver.
+- The chunked+verified method produced a clean 12.9K-char Persian file with zero bad mixes after two corrupted full-write attempts.
+
 ## 3. Persian PDF extraction
 - pymupdf `page.get_text()` extracts Persian text cleanly (a 58-page RTL booklet extracted without OCR). Inter-word spacing artifacts come from the PDF fonts, not extraction bugs.
 - Keep extracted text as a working copy under `/data/workspace/<topic>/` so later sessions can re-read without re-extracting.
