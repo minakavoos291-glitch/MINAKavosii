@@ -45,3 +45,22 @@ like `doc_<hash>_<persian name>.pdf` — copy before any processing.
 Persian with ZWNJ is fine in chat messages and file contents; only the memory
 tool (and sometimes the terminal guard) are affected. Do not strip ZWNJ from
 user-facing output.
+
+## Safe long-Persian-file writes (validated pattern, 2026-08-11)
+Long Persian profile/analysis files (30K+ chars) risk corruption when written
+in one shot. Working pattern used repeatedly:
+1. Write in chunks of 3–5KB via `execute_code`: first chunk opens the file
+   (`open(path,'w',encoding='utf-8')`), subsequent chunks append
+   (`read + chunk + write`). Each chunk stays small and verifiable.
+2. Per chunk, validate immediately with
+   `bad = re.findall(r'[a-zA-Z]{2,}[\u0600-\u06FF]|[\u0600-\u06FF][a-zA-Z]{2,}', chunk)`
+   and print `len(chunk), len(bad)` — 0 bad mixes = clean Persian.
+3. Final validation before backup: total chars, bad mixes, `# ` header count.
+4. Then run the GitHub backup. A chunk showing `bad > 0` must be rewritten
+   (characters get corrupted in transit) before appending more.
+
+## Verify side effects before claiming them
+A blocked/pending tool call (e.g. execute_code that timed out awaiting
+approval) means the side effect did NOT happen. Do not tell the user "added to
+file / backed up" unless the tool call returned success. Deliver content in
+chat, state plainly what is and isn't persisted, offer to finish the write.
