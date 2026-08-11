@@ -6,7 +6,7 @@ Skill meta-ontomics-assistant: USER-OWNED (created_by=None) — curator patches 
 §
 Jozve 2 'Amozesh-e Didan' (11 pages): 16-step personality review method + 12 dimensions + 23 tips (first impression, secrecy, no curiosity). Key hadith: 'Haqu an taqula ra'aytu' (the truth is you say: I saw). Files in meta-ontomics/: jozve-amozesh-didan.txt, dastoorolamal-didan.md, gozaresh-didan-mahnaz.md.
 §
-delivery msg AND final summary page flowing prose; EVERY analysis section fully narrated in the delivery itself, from the start — no header-then-explain (correction 08-11 'از همان اول تفسیر جامع بده')
+delivery msg = FULL flowing-narrative interpretation of every section from the very start — NEVER a title list followed by explanations; AUTOMATIC and no-reminder (user frustrated 08-11: «چرا باید هر سری این دستور را بهت بدم؟»). Every profile also needs the 19-bodi pass and the 12-part Mina-sample structure, both without reminder.
 §
 Mina's standing expectation: after any correction/omission, immediately persist the fix to memory/skill so she never repeats a reminder («باید خودت را ارتقا بدی که کامل بشی»). Self-upgrade is the default response to feedback.
 §
