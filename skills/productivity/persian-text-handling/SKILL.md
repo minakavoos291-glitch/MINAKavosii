@@ -39,6 +39,14 @@ Symptom (observed 2026-08-10 twice on long Persian markdown, ~15-30K chars in on
 - Fallback that also worked: plain `python3 - <<'EOF'` heredoc write with the same verify step.
 - On a glitch: silently rewrite from the last clean chunk; do NOT narrate the retry to the user (they read it as excuses: «چرا معطل میکنی»، «بهونه نیار»، «زود و سریع باش»). Just rebuild and deliver.
 - The chunked+verified method produced a clean 12.9K-char Persian file with zero bad mixes after two corrupted full-write attempts.
+- Confirmed at scale (2026-08-11): two full personality analyses (سمیرا ۱۳۶۵ rework, ابوالفضل ۱۳۷۹) were written as 10 sequential chunks of ~3-6.7K chars each via execute_code → `data = open(path, encoding='utf-8').read() + chunk; open(path, 'w', encoding='utf-8').write(data)` (append by read+rewrite also works; `open(path,'a')` is fine too). Every chunk reported `bad: 0`; final files ~39K chars, zero corruption, single pass — no retries. For long Persian deliverables this chunked-append + per-chunk regex verify IS the reliable method; do not attempt one-shot full writes.
+
+## 6. Standard verify → backup → deliver pipeline (personality-analysis deliveries)
+For large Persian deliverable files (tahlil-*.md), run this sequence before delivering to the user:
+1. VERIFY: one python one-liner over the final file printing: total chars, bad-mix count (same regex as §5), count of `'# '` headers, and `'<expected section title>' in data` booleans (e.g. 'جمع‌بندیِ جامع', 'نقشه‌ی راهِ ۹۰ روزه'). All clean + expected sections present → exit 0.
+2. BACKUP: run `REDACTED/scripts/hermes-memory-backup.sh --now` (prints file count; e.g. 585 files).
+3. DELIVER: one Persian narrative message — opening «بسم الله الرحمن الرحیم — یا علی 🌸», file name + char count + backup count, what was added vs previous series, final section list, closing «نفرِ بعدی را بفرمایید، یا علی 🌸». No headers/bullets in delivery prose; narrative style only.
+Do NOT narrate mid-write glitches or retries to the user — they read as excuses («چرا معطل میکنی», «بهونه نیار», «زود و سریع باش»). If the user interrupts mid-write (e.g. «انجام بده» / «بنویس برام»), do not re-announce — continue writing chunks silently until the file is complete, then deliver.
 
 ## 3. Persian PDF extraction
 - pymupdf `page.get_text()` extracts Persian text cleanly (a 58-page RTL booklet extracted without OCR). Inter-word spacing artifacts come from the PDF fonts, not extraction bugs.
