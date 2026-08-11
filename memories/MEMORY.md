@@ -9,3 +9,5 @@ Jozve 2 'Amozesh-e Didan' (11 pages): 16-step personality review method + 12 dim
 delivery msg AND final summary page flowing prose; EVERY analysis section fully narrated in the delivery itself, from the start — no header-then-explain (correction 08-11 'از همان اول تفسیر جامع بده')
 §
 Mina's standing expectation: after any correction/omission, immediately persist the fix to memory/skill so she never repeats a reminder («باید خودت را ارتقا بدی که کامل بشی»). Self-upgrade is the default response to feedback.
+§
+Person-analysis corrections (08-11, pending skill adoption): (1) relationship word + proper noun (hamsaresh Hadith) = a PERSON'S name, not a concept — misread once, wasted a full deliverable; when a word could be name-or-term with no anchor, ask ONE clarifying question first. (2) Every tahlil file needs an explicit numbered 19-dimension section (19-dimension review) or user asks for it again. (3) Spouse deep-dives go in separate file tahlil-<name>-<spouse>.md. Known data: Abolfazl 1379's wife is named Hadith.
